@@ -31,7 +31,7 @@ A real-time trading dashboard for Bybit, built with React and Node.js. This appl
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/bybit-dashboard.git
+git clone https://github.com/hulusidemir/bybit-dashboard.git
 cd bybit-dashboard
 ```
 

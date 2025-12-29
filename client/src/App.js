@@ -74,20 +74,23 @@ function App() {
     // const interval = setInterval(fetchData, 5000); return () => clearInterval(interval);
   }, []);
 
+  // API Adresini belirle (Canlıda çevre değişkeninden al, lokalde localhost kullan)
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
   const fetchData = async () => {
     try {
       // 0. Kuru Çek
-      const rateRes = await fetch('http://localhost:5000/api/rate');
+      const rateRes = await fetch(`${API_URL}/api/rate`);
       const rateData = await rateRes.json();
       if (rateData.rate) {
           setTryRate(parseFloat(rateData.rate));
       }
 
-      const balRes = await fetch('http://localhost:5000/api/balance');
+      const balRes = await fetch(`${API_URL}/api/balance`);
       const balData = await balRes.json();
       setBalance(balData.total || 0);
 
-      const posRes = await fetch('http://localhost:5000/api/positions');
+      const posRes = await fetch(`${API_URL}/api/positions`);
       const posData = await posRes.json();
       if (Array.isArray(posData)) {
         setPositions(posData);
@@ -95,7 +98,7 @@ function App() {
         setPositions([]);
       }
 
-      const ordRes = await fetch('http://localhost:5000/api/orders');
+      const ordRes = await fetch(`${API_URL}/api/orders`);
       const ordData = await ordRes.json();
       if (Array.isArray(ordData)) {
          setOrders(ordData);
