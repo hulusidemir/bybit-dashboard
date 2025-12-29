@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@500&display=swap');
+
+body {
+  background-color: #0b0e11;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #f0b90b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2d2d2d;
+  padding-bottom: 10px;
+  color: #848e9c;
+}
+
+.card {
+  background-color: #1e2329;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  border: 1px solid #2b3139;
+}
+
+/* BAKİYE */
+.balance-card {
+  text-align: center;
+  background: linear-gradient(145deg, #1e2329, #161a1e);
+}
+.balance-amount {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.balance-label {
+  color: #848e9c;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* TABLO */
+.table-container { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+thead tr { background-color: #2b3139; text-align: left; }
+th { padding: 15px; color: #848e9c; font-weight: 600; font-size: 0.85rem; }
+td { padding: 15px; border-bottom: 1px solid #2b3139; }
+tbody tr:hover { background-color: #262b33; }
+
+/* RENKLER VE BADGE */
+.text-green { color: #0ecb81; font-weight: 600; }
+.text-red { color: #f6465d; font-weight: 600; }
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+.badge-long { background-color: rgba(14, 203, 129, 0.15); color: #0ecb81; }
+.badge-short { background-color: rgba(246, 70, 93, 0.15); color: #f6465d; }
+
+/* --- YENİ EMİR LİSTESİ DÜZENİ (GRID SİSTEMİ) --- */
+.order-list {
+  list-style: none;
+  padding: 0;
+}
+.order-item {
+  display: grid;
+  /* 4 Sütun: Sembol(%35) - Yön(%15) - Fiyat(%25) - Miktar(%25) */
+  grid-template-columns: 35% 15% 25% 25%; 
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #2b3139;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+}
+.order-symbol { color: #fff; font-weight: bold; }
+.order-limit { font-size: 0.75rem; color: #848e9c; margin-left: 8px; }
+.order-side { font-weight: bold; }
+.order-price { color: #e0e0e0; }
+.order-amount { text-align: right; color: #848e9c; }
+
+/* BUTON */
+.refresh-btn {
+  background-color: #f0b90b;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+.refresh-btn:hover { background-color: #ffe251; transform: translateY(-2px); }
