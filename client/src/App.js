@@ -131,10 +131,10 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 10px'}}>
+      <div className="header-container">
         <h1>{t.title}</h1>
-        <div style={{display: 'flex', alignItems: 'center'}}>
-            <div className="currency-toggle" style={{marginRight: '15px'}}>
+        <div className="header-controls">
+            <div className="currency-toggle">
                 <button 
                     onClick={() => setCurrency('USD')} 
                     style={{
